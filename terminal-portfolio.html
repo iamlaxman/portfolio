@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxman Poudel | Cybersecurity & Web Development Portfolio</title>
+    <meta name="description" content="Laxman Poudel's professional portfolio. Cybersecurity expert and web developer with 5+ years of experience in ethical hacking, web development, and secure digital solutions.">
+    <meta name="keywords" content="Laxman Poudel, cybersecurity expert, ethical hacker, web developer, portfolio, Nepal developer, security audit, web applications, freelance developer, secure websites, penetration testing">
+    <meta name="author" content="Laxman Poudel">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://laxman-poudel.com.np/terminal-portfolio.html">
+    <link rel="alternate" hreflang="en" href="https://laxman-poudel.com.np/terminal-portfolio.html">
+    <link rel="alternate" hreflang="en-US" href="https://laxman-poudel.com.np/terminal-portfolio.html">
+    <link rel="alternate" hreflang="en-NP" href="https://laxman-poudel.com.np/terminal-portfolio.html">
+    <link rel="alternate" hreflang="x-default" href="https://laxman-poudel.com.np/terminal-portfolio.html">
+    
+    <!-- Preconnect to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4f46e5">
+    <meta name="msapplication-TileColor" content="#4f46e5">
+    <meta name="theme-color" content="#4f46e5">
+    
+    <!-- Enhanced Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Laxman Poudel | Cybersecurity & Web Development Portfolio">
+    <meta property="og:description" content="Explore the professional portfolio of Laxman Poudel, a cybersecurity expert and web developer with 5+ years of experience creating secure digital solutions for clients worldwide.">
+    <meta property="og:image" content="https://laxman-poudel.com.np/images/logo.png">
+    <meta property="og:image:alt" content="Laxman Poudel - Professional Cybersecurity Expert & Web Developer">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://laxman-poudel.com.np/">
+    <meta property="og:site_name" content="Laxman Poudel Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Enhanced Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Laxman Poudel | Cybersecurity & Web Development Portfolio">
+    <meta property="twitter:description" content="Explore the professional portfolio of Laxman Poudel, a cybersecurity expert and web developer with 5+ years of experience creating secure digital solutions.">
+    <meta property="twitter:image" content="https://laxman-poudel.com.np/images/logo.png">
+    <meta property="twitter:image:alt" content="Laxman Poudel - Professional Cybersecurity Expert & Web Developer">
+    <meta property="twitter:site" content="@laxmanpoudel">
+    <meta property="twitter:creator" content="@laxmanpoudel">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Embedded CSS -->
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --background-color: #000;
+            --window-bg: #1e1e1e;
+            --window-border: #333;
+            --text-color: #e2e8f0;
+            --cursor-color: #4f46e5;
+            --matrix-color: #00ff00;
+            --banner-bg: #0a0a0a;
+            --banner-border: #4f46e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Fira Code', monospace;
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #terminal-container {
+            width: 90%;
+            max-width: 900px;
+            height: 80vh;
+            margin: 5vh auto;
+            background-color: var(--window-bg);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Terminal Window Header */
+        .terminal-header {
+            background-color: #333;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--window-border);
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 8px;
+            margin-right: 15px;
+        }
+
+        .control {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+
+        .close {
+            background-color: #ff5f56;
+        }
+
+        .minimize {
+            background-color: #ffbd2e;
+        }
+
+        .maximize {
+            background-color: #27c93f;
+        }
+
+        .window-title {
+            color: #aaa;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Prominent Banner */
+        .banner {
+            padding: 20px;
+            text-align: center;
+            margin: 10px 0;
+            background-color: rgba(79, 70, 229, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--banner-border);
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+            animation: glowText 2s ease-in-out infinite alternate;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(79, 70, 229, 0.9), 0 0 30px rgba(79, 70, 229, 0.7);
+            }
+        }
+
+        /* Terminal Body */
+        .terminal-body {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output-line {
+            margin-bottom: 10px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .command-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .prompt {
+            color: var(--text-color);
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        .command {
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            outline: none;
+            caret-color: var(--cursor-color);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.2rem;
+            background-color: var(--cursor-color);
+            margin-left: 2px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .typing {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid var(--text-color);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--text-color); }
+        }
+
+        /* Matrix Rain Effect */
+        #matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .matrix-active {
+            opacity: 0.5 !important;
+        }
+
+        /* Command highlight */
+        .command-highlight {
+            color: #00ccff;
+            font-weight: bold;
+        }
+
+        /* Link styling */
+        .terminal-link {
+            color: #ff79c6;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .terminal-link:hover {
+            color: #ff8ad4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #terminal-container {
+                width: 95%;
+                height: 85vh;
+                margin: 2.5vh auto;
+            }
+            
+            .terminal-body {
+                padding: 15px;
+            }
+            
+            .prompt {
+                font-size: 0.9rem;
+            }
+            
+            .command {
+                font-size: 0.9rem;
+            }
+            
+            .banner h1 {
+                font-size: 2rem;
+            }
+            
+            .banner p {
+                font-size: 1rem;
+            }
+            
+            .window-title {
+                font-size: 0.8rem;
+            }
+            
+            .control {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #terminal-container {
+                width: 98%;
+                height: 90vh;
+                margin: 1vh auto;
+            }
+            
+            .terminal-header {
+                padding: 8px 12px;
+            }
+            
+            .window-controls {
+                gap: 6px;
+            }
+            
+            .control {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .window-title {
+                font-size: 0.7rem;
+            }
+            
+            .banner {
+                padding: 15px;
+            }
+            
+            .banner h1 {
+                font-size: 1.8rem;
+            }
+            
+            .banner p {
+                font-size: 0.9rem;
+            }
+            
+            .terminal-body {
+                padding: 10px;
+            }
+            
+            .prompt {
+                font-size: 0.8rem;
+                margin-right: 5px;
+            }
+            
+            .command {
+                font-size: 0.8rem;
+            }
+            
+            .output-line {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Touch-friendly controls for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .terminal-link {
+                padding: 8px 12px;
+                border-radius: 6px;
+                min-height: 44px; /* Minimum touch target size */
+                display: inline-block;
+            }
+            
+            .terminal-body {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Larger touch targets for mobile navigation */
+            .nav-link, .mobile-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Larger buttons for mobile */
+            .project-btn, .hire-btn, .portfolio-btn, .contact-btn, .cv-btn {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        .terminal-body {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        .terminal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track {
+            background: #111;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: var(--text-color);
+            border-radius: 4px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb:hover {
+            background: #00cc7f;
+        }
+    </style>
+    
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Laxman Poudel",
+      "url": "https://laxman-poudel.com.np/",
+      "image": "https://laxman-poudel.com.np/images/logo.png",
+      "jobTitle": "Cybersecurity Expert & Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tech Innovations Ltd.",
+        "url": "https://techinnovations.example.com"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University of Technology",
+        "url": "https://universityoftechnology.example.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/laxmanpoudel",
+        "https://github.com/iamlaxman",
+        "https://twitter.com/laxmanpoudel",
+        "https://facebook.com/laxmanpoudel2008"
+      ],
+      "description": "Professional cybersecurity expert and web developer with 5+ years of experience in creating innovative digital solutions for clients worldwide.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ratuwamai",
+        "addressRegion": "Morang",
+        "addressCountry": "Nepal"
+      },
+      "email": "mailto:ethical.laxman@gmail.com",
+      "telephone": "+977-9867844454",
+      "knowsAbout": ["Cybersecurity", "Ethical Hacking", "Web Development", "JavaScript", "Python", "React", "Node.js"],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://laxman-poudel.com.np/"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Cybersecurity Expert & Web Developer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Nepal"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://laxman-poudel.com.np/"
+        }
+      },
+      "hasPortfolio": {
+        "@type": "CreativeWork",
+        "name": "Portfolio Projects",
+        "hasPart": [{
+          "@type": "CreativeWork",
+          "name": "SMS Adda",
+          "description": "A messaging platform that uses Firebase as the backend service.",
+          "url": "https://iamlaxman.github.io/smsadda"
+        },{
+          "@type": "CreativeWork",
+          "name": "Sungabha School Website",
+          "description": "A school website frontend I created using HTML, CSS, and JavaScript.",
+          "url": "https://iamlaxman.github.io/sungabha-school/"
+        },{
+          "@type": "CreativeWork",
+          "name": "Personal Portfolio Website",
+          "description": "A responsive personal portfolio website showcasing my skills and projects, built with modern web technologies",
+          "url": "https://laxman-poudel.com.np/"
+        }]
+      },
+      "hasSkill": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Web Development",
+          "description": "Building responsive, high-performance websites with modern technologies and best practices."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Cybersecurity",
+          "description": "Professional cybersecurity expert with expertise in ethical hacking and security auditing."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Penetration Testing",
+          "description": "Proactive security testing to identify vulnerabilities and weaknesses in systems."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Software Development",
+          "description": "Developing custom software solutions tailored to business needs and technical requirements."
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://laxman-poudel.com.np/terminal-portfolio.html"
+      }]
+    }
+    </script>
+    
+    <!-- Organization Schema Markup for Logo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Laxman Poudel",
+      "url": "https://laxman-poudel.com.np/",
+      "logo": "https://laxman-poudel.com.np/images/logo.png",
+      "image": "https://laxman-poudel.com.np/images/logo.png",
+      "sameAs": [
+        "https://github.com/iamlaxman",
+        "https://www.linkedin.com/",
+        "https://www.facebook.com/"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="terminal-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+            <div class="window-title">laxman@portfolio: ~</div>
+        </div>
+        
+        <!-- Prominent Banner -->
+        <div class="banner">
+            <h1>Hello, I'm Laxman <span style="color: #4f46e5;">Poudel</span></h1>
+            <p>Cybersecurity Expert & Web Developer</p>
+        </div>
+        
+        <div class="terminal-body" id="terminal-body">
+            <div class="output-line">Welcome to Laxman Poudel's Terminal Portfolio - Cybersecurity Expert & Web Developer</div>
+            <div class="output-line">Type <span class="command-highlight">'help'</span> to see available commands</div>
+            <div class="output-line">></div>
+            
+            <div id="output-container"></div>
+            
+            <div class="command-line">
+                <div class="prompt">laxman@portfolio:~$</div>
+                <input type="text" class="command" id="command-input" autocomplete="off" autofocus>
+                <div class="cursor" id="cursor"></div>
+            </div>
+        </div>
+    </div>
+    
+    <canvas id="matrix-rain"></canvas>
+
+    <script>
+        // Personal information
+        const personalInfo = {
+            name: "Laxman Poudel",
+            title: "Developer • Designer • Ethical Hacker",
+            location: "Ratuwamai-10, Morang, Nepal",
+            tagline: "I'm Laxman Poudel, a cybersecurity expert and web developer creating stunning digital experiences through innovative web development, ethical hacking, and creative design solutions.",
+            bio: "My name is Laxman Poudel, and I come from Ratuwamai-10, Sombare, Morang, Nepal. I am a passionate cybersecurity expert and web developer with 5 years of experience in the tech industry. Since childhood, I have been driven by a dream to master technology, which has fueled my dedication to creating innovative solutions and designs. My work reflects a perfect balance between creativity and technical expertise, allowing me to tackle challenges effectively and deliver exceptional results in cybersecurity and web development.",
+            experience: [
+                {
+                    role: "Senior Developer",
+                    company: "Tech Innovations Ltd.",
+                    period: "2020 - Present",
+                    description: "Leading development of cutting-edge web applications and mentoring junior developers."
+                },
+                {
+                    role: "Web Developer",
+                    company: "Digital Solutions Inc.",
+                    period: "2018 - 2020",
+                    description: "Developed responsive websites and web applications for various clients."
+                },
+                {
+                    role: "Diploma in Web Design",
+                    company: "Creative Institute",
+                    period: "2014 - 2016",
+                    description: "Focused on UI/UX design principles and front-end development technologies."
+                }
+            ],
+            education: [
+                {
+                    degree: "Bachelor of Computer Science",
+                    institution: "University of Technology",
+                    period: "2016 - 2018",
+                    description: "Graduated with honors, specializing in software engineering and cybersecurity."
+                },
+                {
+                    degree: "Sungabha School",
+                    institution: "+2 in Science",
+                    period: "2024 - Present",
+                    description: ""
+                },
+                {
+                    degree: "Rastranirman Secondary School",
+                    institution: "Honors List, GPA: 3.66",
+                    period: "2012 - 2024",
+                    description: ""
+                }
+            ],
+            social: {
+                github: "https://github.com/iamlaxman",
+                linkedin: "https://linkedin.com/in/laxmanpoudel",
+                email: "mailto:ethical.laxman@gmail.com",
+                twitter: "https://twitter.com/laxmanpoudel",
+                facebook: "https://facebook.com/laxmanpoudel2008"
+            },
+            skills: [
+                "Web Development (HTML, CSS, JavaScript)",
+                "Cybersecurity & Ethical Hacking",
+                "Python Programming",
+                "React & Frontend Frameworks",
+                "Linux System Administration",
+                "Network Security",
+                "Penetration Testing",
+                "UI/UX Design",
+                "App Design"
+            ],
+            projects: [
+                {
+                    name: "SMS Adda",
+                    description: "A messaging platform that uses Firebase as the backend service.",
+                    github: "https://github.com/iamlaxman/smsadda",
+                    demo: "https://iamlaxman.github.io/smsadda"
+                },
+                {
+                    name: "Sungabha School Website",
+                    description: "A school website frontend I created using HTML, CSS, and JavaScript.",
+                    github: "https://github.com/iamlaxman/sungabha-school/",
+                    demo: "https://iamlaxman.github.io/sungabha-school/"
+                },
+                {
+                    name: "Personal Portfolio Website",
+                    description: "A responsive personal portfolio website showcasing my skills and projects, built with modern web technologies",
+                    github: "https://github.com/iamlaxman/portfolio",
+                    demo: "https://laxman-poudel.com.np/"
+                }
+            ]
+        };
+
+        // DOM Elements
+        const terminalBody = document.getElementById('terminal-body');
+        const commandInput = document.getElementById('command-input');
+        const outputContainer = document.getElementById('output-container');
+        const cursor = document.getElementById('cursor');
+
+        // Command history
+        let commandHistory = [];
+        let historyIndex = -1;
+
+        // Matrix rain effect
+        const matrixCanvas = document.getElementById('matrix-rain');
+        const matrixCtx = matrixCanvas.getContext('2d');
+        let matrixActive = false;
+        let matrixChars = [];
+        const matrixCharsList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&*";
+        
+        // Set canvas size
+        function resizeMatrixCanvas() {
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+        }
+        
+        resizeMatrixCanvas();
+        window.addEventListener('resize', resizeMatrixCanvas);
+
+        // Initialize matrix rain
+        function initMatrixRain() {
+            matrixChars = [];
+            const fontSize = 14;
+            const columns = matrixCanvas.width / fontSize;
+            
+            for (let i = 0; i < columns; i++) {
+                matrixChars[i] = {
+                    x: i * fontSize,
+                    y: Math.random() * -100,
+                    fontSize: fontSize,
+                    speed: 2 + Math.random() * 5,
+                    char: matrixCharsList[Math.floor(Math.random() * matrixCharsList.length)]
+                };
+            }
+        }
+
+        // Draw matrix rain
+        function drawMatrixRain() {
+            if (!matrixActive) return;
+            
+            matrixCtx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+            
+            matrixCtx.fillStyle = '#00ff00';
+            matrixCtx.font = '14px "Fira Code"';
+            
+            for (let i = 0; i < matrixChars.length; i++) {
+                const char = matrixChars[i];
+                matrixCtx.fillText(char.char, char.x, char.y);
+                
+                char.y += char.speed;
+                char.char = matrixCharsList[Math.floor(Math.random() * matrixCharsList.length)];
+                
+                if (char.y > matrixCanvas.height && Math.random() > 0.975) {
+                    char.y = Math.random() * -100;
+                }
+            }
+            
+            requestAnimationFrame(drawMatrixRain);
+        }
+
+        // Start matrix effect
+        function startMatrixEffect() {
+            matrixActive = true;
+            matrixCanvas.classList.add('matrix-active');
+            initMatrixRain();
+            drawMatrixRain();
+        }
+
+        // Stop matrix effect
+        function stopMatrixEffect() {
+            matrixActive = false;
+            matrixCanvas.classList.remove('matrix-active');
+        }
+
+        // Add output to terminal with typing animation
+        function addOutputWithTyping(text, delay = 50) {
+            const outputLine = document.createElement('div');
+            outputLine.className = 'output-line';
+            outputContainer.appendChild(outputLine);
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    outputLine.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, delay);
+                }
+            }
+            
+            typeWriter();
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        // Add output to terminal
+        function addOutput(text) {
+            const outputLine = document.createElement('div');
+            outputLine.className = 'output-line';
+            outputLine.textContent = text;
+            outputContainer.appendChild(outputLine);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        // Add formatted output with links
+        function addFormattedOutput(lines) {
+            lines.forEach(line => {
+                const outputLine = document.createElement('div');
+                outputLine.className = 'output-line';
+                outputLine.innerHTML = line;
+                outputContainer.appendChild(outputLine);
+            });
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        // Clear terminal
+        function clearTerminal() {
+            outputContainer.innerHTML = '';
+        }
+
+        // Command functions
+        const commands = {
+            help: () => {
+                const helpText = [
+                    "Available commands:",
+                    "  <span class='command-highlight'>help</span>     - Show this help message",
+                    "  <span class='command-highlight'>about</span>    - Display information about me",
+                    "  <span class='command-highlight'>bio</span>      - Show my detailed biography",
+                    "  <span class='command-highlight'>skills</span>   - List my technical skills",
+                    "  <span class='command-highlight'>projects</span> - Show my projects",
+                    "  <span class='command-highlight'>experience</span> - Display my work experience",
+                    "  <span class='command-highlight'>education</span> - Show my educational background",
+                    "  <span class='command-highlight'>contact</span>  - Display contact information",
+                    "  <span class='command-highlight'>social</span>   - Show my social media links",
+                    "  <span class='command-highlight'>resume</span>   - View my resume",
+                    "  <span class='command-highlight'>clear</span>    - Clear the terminal screen",
+                    "  <span class='command-highlight'>theme</span>    - Change terminal theme",
+                    "  <span class='command-highlight'>matrix</span>   - Toggle matrix rain effect",
+                    "  <span class='command-highlight'>date</span>     - Show current date and time",
+                    "  <span class='command-highlight'>exit</span>     - Close the terminal"
+                ];
+                addFormattedOutput(helpText);
+            },
+            
+            about: () => {
+                const aboutText = [
+                    `<span class='command-highlight'>Name:</span> ${personalInfo.name}`,
+                    `<span class='command-highlight'>Title:</span> ${personalInfo.title}`,
+                    `<span class='command-highlight'>Location:</span> ${personalInfo.location}`,
+                    "",
+                    personalInfo.tagline
+                ];
+                addFormattedOutput(aboutText);
+            },
+            
+            bio: () => {
+                addOutput(personalInfo.bio);
+            },
+            
+            skills: () => {
+                addOutput("Technical Skills:");
+                personalInfo.skills.forEach(skill => {
+                    addOutput(`  • ${skill}`);
+                });
+                
+                // Add additional skills from the main portfolio
+                const additionalSkills = [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript",
+                    "React",
+                    "Python",
+                    "Linux",
+                    "SQL",
+                    "Design"
+                ];
+                
+                if (additionalSkills.length > 0) {
+                    addOutput("");
+                    addOutput("Technologies & Tools:");
+                    additionalSkills.forEach(skill => {
+                        addOutput(`  • ${skill}`);
+                    });
+                }
+            },
+            
+            projects: () => {
+                addOutput("Projects:");
+                personalInfo.projects.forEach((project, index) => {
+                    const projectText = [
+                        `  <span class='command-highlight'>${index + 1}. ${project.name}</span>:`,
+                        `    ${project.description}`,
+                        `    <span class='terminal-link' onclick="window.open('${project.github}', '_blank')">[Source Code]</span>`,
+                        `    <span class='terminal-link' onclick="window.open('${project.demo}', '_blank')">[Live Demo]</span>`,
+                        ""
+                    ];
+                    addFormattedOutput(projectText);
+                });
+            },
+            
+            experience: () => {
+                addOutput("Work Experience:");
+                personalInfo.experience.forEach(exp => {
+                    const expText = [
+                        `  <span class='command-highlight'>${exp.role}</span> at ${exp.company}`,
+                        `  ${exp.period}`,
+                        `  ${exp.description}`,
+                        ""
+                    ];
+                    addFormattedOutput(expText);
+                });
+            },
+            
+            education: () => {
+                addOutput("Education:");
+                personalInfo.education.forEach(edu => {
+                    const eduText = [
+                        `  <span class='command-highlight'>${edu.degree}</span>`,
+                        `  ${edu.institution}`,
+                        `  ${edu.period}`,
+                        `  ${edu.description}`,
+                        ""
+                    ];
+                    addFormattedOutput(eduText);
+                });
+            },
+            
+            contact: () => {
+                const contactText = [
+                    "Contact Information:",
+                    `  <span class='command-highlight'>Email:</span> <span class='terminal-link' onclick="window.open('${personalInfo.social.email}', '_blank')">${personalInfo.social.email.replace('mailto:', '')}</span>`,
+                    `  <span class='command-highlight'>Phone:</span> +977 9867844454`,
+                    `  <span class='command-highlight'>Location:</span> ${personalInfo.location}`,
+                    "",
+                    "Type <span class='command-highlight'>social</span> to see my social media links"
+                ];
+                addFormattedOutput(contactText);
+            },
+            
+            social: () => {
+                const socialText = [
+                    "Social Media:",
+                    `  <span class='command-highlight'>GitHub:</span> <span class='terminal-link' onclick="window.open('${personalInfo.social.github}', '_blank')">${personalInfo.social.github}</span>`,
+                    `  <span class='command-highlight'>LinkedIn:</span> <span class='terminal-link' onclick="window.open('${personalInfo.social.linkedin}', '_blank')">${personalInfo.social.linkedin}</span>`,
+                    `  <span class='command-highlight'>Twitter:</span> <span class='terminal-link' onclick="window.open('${personalInfo.social.twitter}', '_blank')">${personalInfo.social.twitter}</span>`,
+                    `  <span class='command-highlight'>Facebook:</span> <span class='terminal-link' onclick="window.open('${personalInfo.social.facebook}', '_blank')">${personalInfo.social.facebook}</span>`,
+                    "",
+                    "Type <span class='command-highlight'>contact</span> for more contact details"
+                ];
+                addFormattedOutput(socialText);
+            },
+            
+            resume: () => {
+                const resumeText = [
+                    "Resume/CV:",
+                    "  You can download my resume in PDF format:",
+                    `  <span class='terminal-link' onclick="window.open('assets/Laxman_Poudel_CV.pdf', '_blank')">[Download Resume]</span>`,
+                    "",
+                    "  Or view my interactive 3D resume by visiting the main portfolio website."
+                ];
+                addFormattedOutput(resumeText);
+            },
+            
+            clear: () => {
+                clearTerminal();
+            },
+            
+            theme: (args) => {
+                if (args[0] === "matrix") {
+                    addOutput("Activating matrix theme...");
+                    startMatrixEffect();
+                } else if (args[0] === "default") {
+                    addOutput("Returning to default theme...");
+                    stopMatrixEffect();
+                } else {
+                    const themeText = [
+                        "Available themes:",
+                        "  <span class='command-highlight'>matrix</span>  - Activate matrix rain effect",
+                        "  <span class='command-highlight'>default</span> - Return to default theme"
+                    ];
+                    addFormattedOutput(themeText);
+                }
+            },
+            
+            matrix: () => {
+                if (matrixActive) {
+                    addOutput("Deactivating matrix effect...");
+                    stopMatrixEffect();
+                } else {
+                    addOutput("Activating matrix effect...");
+                    startMatrixEffect();
+                }
+            },
+            
+            date: () => {
+                const now = new Date();
+                addOutput(now.toString());
+            },
+            
+            exit: () => {
+                addOutput("Closing terminal...");
+                setTimeout(() => {
+                    window.close();
+                }, 1000);
+            },
+            
+            sudo: (args) => {
+                if (args[0] === "laxman") {
+                    addOutput("Access denied. You are not root.");
+                } else {
+                    addOutput(`sudo: ${args[0]}: command not found`);
+                }
+            },
+            
+            whoami: () => {
+                addOutput("laxman");
+            },
+            
+            pwd: () => {
+                addOutput("/home/laxman/portfolio");
+            },
+            
+            ls: () => {
+                addOutput("about.txt    skills.txt    projects/    experience.txt    education.txt    contact.txt    social.txt");
+            }
+        };
+
+        // Process command
+        function processCommand(input) {
+            const trimmedInput = input.trim();
+            if (!trimmedInput) return;
+            
+            commandHistory.push(trimmedInput);
+            historyIndex = commandHistory.length;
+            
+            const [command, ...args] = trimmedInput.split(' ');
+            
+            addOutput(`laxman@portfolio:~$ ${trimmedInput}`);
+            
+            if (commands[command]) {
+                commands[command](args);
+            } else {
+                addOutput(`Command not found: ${command}. Type 'help' for available commands.`);
+            }
+        }
+
+        // Event Listeners
+        commandInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                processCommand(e.target.value);
+                e.target.value = '';
+            } else if (e.key === 'ArrowUp') {
+                if (commandHistory.length > 0) {
+                    if (historyIndex > 0) historyIndex--;
+                    e.target.value = commandHistory[historyIndex] || '';
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    e.target.value = commandHistory[historyIndex] || '';
+                } else {
+                    historyIndex = commandHistory.length;
+                    e.target.value = '';
+                }
+                e.preventDefault();
+            }
+        });
+
+        // Focus input when clicking anywhere in terminal
+        terminalBody.addEventListener('click', () => {
+            commandInput.focus();
+        });
+
+        // Initial focus
+        commandInput.focus();
+
+        // Add blinking cursor effect
+        setInterval(() => {
+            cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+        }, 500);
+
+        // Easter egg: Konami code
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    const secretText = [
+                        "██╗  ██╗ █████╗ ██╗  ██╗███████╗███╗   ██╗    ██████╗  █████╗ ██████╗ ███████╗██████╗ ",
+                        "██║  ██║██╔══██╗╚██╗██╔╝██╔════╝████╗  ██║    ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗",
+                        "███████║███████║ ╚███╔╝ █████╗  ██╔██╗ ██║    ██████╔╝███████║██████╔╝█████╗  ██████╔╝",
+                        "██╔══██║██╔══██║ ██╔██╗ ██╔══╝  ██║╚██╗██║    ██╔═══╝ ██╔══██╗██╔═══╝ ██╔══╝  ██╔══██╗",
+                        "██║  ██║██║  ██║██╔╝ ██╗███████╗██║ ╚████║    ██║     ██║  ██║██║     ███████╗██║  ██║",
+                        "╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝",
+                        "",
+                        "Congratulations! You've unlocked the secret hacker mode!",
+                        "Activating matrix effect...",
+                        ""
+                    ];
+                    addFormattedOutput(secretText);
+                    startMatrixEffect();
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+
+        // Initial welcome message with typing effect
+        setTimeout(() => {
+            addOutputWithTyping("Initializing terminal interface...");
+            setTimeout(() => {
+                addOutputWithTyping("Loading portfolio data...");
+                setTimeout(() => {
+                    addOutputWithTyping("Welcome to Laxman Poudel's Portfolio Terminal Interface");
+                    setTimeout(() => {
+                        addOutputWithTyping("Type 'help' to see available commands");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 500);
+
+        // Touch support for mobile devices
+        if ('ontouchstart' in window) {
+            // Add touch-friendly styles
+            document.body.classList.add('touch-device');
+        }
+    </script>
+    
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What services does Laxman Poudel offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laxman Poudel offers a range of services including web development, penetration testing, software development, and security auditing. With 5+ years of experience in cybersecurity and web development, he creates secure digital solutions for clients worldwide."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is Laxman Poudel's experience in cybersecurity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laxman Poudel is a cybersecurity expert with 5+ years of experience in ethical hacking and security auditing. He has secured over 200+ websites from vulnerabilities and specializes in penetration testing, network security, and creating robust system security."
+        }
+      },{
+        "@type": "Question",
+        "name": "Where is Laxman Poudel based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laxman Poudel is based in Ratuwamai-10, Morang, Nepal. He works remotely with clients worldwide, providing cybersecurity and web development services."
+        }
+      },{
+        "@type": "Question",
+        "name": "What technologies does Laxman Poudel specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laxman Poudel specializes in a wide range of technologies including HTML5, CSS3, JavaScript, React, Python, Linux, SQL, and cybersecurity tools. He has expertise in both frontend and backend development as well as ethical hacking and security auditing."
+        }
+      }]
+    }
+    </script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+      // Performance monitoring for Core Web Vitals
+      if ('performance' in window) {
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            if (perfData) {
+              // Log performance metrics to console (in production, send to analytics)
+              console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart + 'ms');
+              console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.fetchStart + 'ms');
+              console.log('First Paint:', performance.getEntriesByType('paint')[0]?.startTime || 'N/A');
+            }
+          }, 0);
+        });
+      }
+    </script>
+</body>
+</html>
